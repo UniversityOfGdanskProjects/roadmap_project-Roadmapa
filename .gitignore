@@ -1,1 +1,5 @@
 node_modules
+
+# ignore scss output files
+*.css
+*.css.map

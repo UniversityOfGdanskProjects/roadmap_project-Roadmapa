@@ -17,9 +17,11 @@ function App() {
   }, [])
 
   return (
-    <div>
-      hello
-    </div>
+    <main>
+      {
+        backData.map(data => <div key={data.id}><h1>{data.text}</h1> <h2>{data.details}</h2></div>)
+      }
+    </main>
   )
 }
 
