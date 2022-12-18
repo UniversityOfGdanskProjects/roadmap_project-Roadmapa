@@ -1,6 +1,8 @@
 //pobrać wtyczkę React Snippets w VSC
 
 import React, { useEffect, useState } from 'react'
+import { Link, Route, Routes } from "react-router-dom"
+import { Home } from "./pages/Home"
 
 function App() {
   
@@ -17,11 +19,11 @@ function App() {
   }, [])
 
   return (
-    <main>
-      {
-        backData.map(data => <div key={data.id}><h1>{data.text}</h1> <h2>{data.details}</h2></div>)
-      }
-    </main>
+    <>
+      <Routes>
+      <Route path="/" element={<Home />} />
+      </Routes>
+    </>
   )
 }
 
